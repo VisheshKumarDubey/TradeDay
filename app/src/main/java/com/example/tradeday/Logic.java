@@ -78,16 +78,38 @@ public class Logic {
             } else {
                 baby[r] = Math.pow((y) + value1[(int) mapping[r][c]], 2);
             }
-            if (y != 0 && c <= 4) {
-                baby[r] = Math.pow((y) + value1[(int) mapping[r][c]], 2);
+            if (y != 0 && c < 4) {
+               // baby[r] = Math.pow((y) + value1[(int) mapping[r][c]], 2);
                 if (mapping[r][c] == 0) {
                     y++;
-                }
+                    baby[r] = Math.pow((y) + value1[(int) mapping[r][c]], 2);
 
-            } else if (y != 0 && c > 4) {
-                baby[r] = Math.pow((y) + value1[(int) mapping[r][c]], 2);
-                if (mapping[r][c] == 8)
+                }
+                else
+                    baby[r] = Math.pow((y) + value1[(int) mapping[r][c]], 2);
+
+            }
+            else if( y!=0 && c==4)
+            {
+               if(r==0)
+               {
+                   y++;
+                   baby[r] = Math.pow((y) + value1[(int) mapping[r][c]], 2);
+               }
+               else
+                   baby[r] = Math.pow((y) + value1[(int) mapping[r][c]], 2);
+            }
+            else if (y != 0 && c > 4) {
+
+                if (mapping[r][c] == 8){
+
+
+                    baby[r] = Math.pow((y) + value1[(int) mapping[r][c]], 2);
                     y++;
+                }
+                else
+                    baby[r] = Math.pow((y) + value1[(int) mapping[r][c]], 2);
+
 
             }
         }

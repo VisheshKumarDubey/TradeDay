@@ -14,7 +14,7 @@ public class splash extends AppCompatActivity {
     private static int SPLASH_SCREEN_TIME_OUT = 1500;
     SharedPreferences pref;
     SharedPreferences.Editor editor;
-    private int expiry = 2;
+    private int expiry = 30;
     // TimeUnit.DAYS.toMillis(1);     // 1 day to milliseconds.
 //TimeUnit.MINUTES.toMillis(23); // 23 minutes to milliseconds.
 //TimeUnit.HOURS.toMillis(4);    // 4 hours to milliseconds.
